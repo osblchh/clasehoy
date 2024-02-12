@@ -11,10 +11,19 @@
 <head>
     <hr>
     <h1>
-        Listado de Pacientes
+        Listado de Visitas
     </h1>
-    </hr>
+    <hr>
 </head>
+
+<section>
+    <a href="crearVisita.php"><h3 style="text-align:center">Añadir Visita</h3></a>
+</section>
+<hr>
+<section>
+    <a href="crearPaciente.php"><h3 style="text-align:center">Añadir Paciente</h3></a>
+</section>
+<hr>
 
 <?php
 
@@ -37,10 +46,10 @@ function listPatients(){
         
         echo "<td>" . $linea[2] . "</td>";
 
-        if ($linea[3]=="True"){
-            echo "<td class='pagado'>" . $linea[3] . "</td>";
+        if ($linea[3]==="True"){
+            echo "<td><img width='30' height='30' src='https://img.icons8.com/ios/50/000000/checkmark--v1.png' alt='checkmark--v1'/></td>";
         } else {
-            echo "<td class='impagado'>" . $linea[3] . "</td>";
+            echo "<td><img width='30' height='30' src='https://img.icons8.com/emoji/48/cross-mark-emoji.png' alt='cross-mark-emoji'/></td>";
         }
         echo "<tr>";
     }
