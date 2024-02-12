@@ -1,6 +1,7 @@
 h1{
     text-align: center;
 }
+
 table {
     width: 100%;
     border: 1px solid #999;
@@ -29,3 +30,6 @@ table {
  .impagado{
     color:red
  }
+h3{
+   text-align: center !important;
+}
