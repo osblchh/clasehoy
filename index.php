@@ -8,5 +8,6 @@
 <body>
     <a href="./templates/patients/index.php">Patients</a>
     <a href="./templates/visits/index.php">Visits</a>
+    <br>;
 </body>
 </html>
