@@ -6,7 +6,7 @@
     <title>Document</title>
 </head>
 <body>
-    <a href="/patients/index.php">Patients</a>
-    <a href="/visits/index.php">Visits</a>
+    <a href="./templates/patients/index.php">Patients</a>
+    <a href="./templates/visits/index.php">Visits</a>
 </body>
 </html>
