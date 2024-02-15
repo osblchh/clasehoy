@@ -17,22 +17,22 @@
 </head>
 
 <section>
-    <a href="crearVisita.php"><h3 style="text-align:center">Añadir Visita</h3></a>
+    <a href="./visitas/crearVisita.php"><h3 style="text-align:center">Añadir Visita</h3></a>
 </section>
 <hr>
 <section>
-    <a href="crearPaciente.php"><h3 style="text-align:center">Añadir Paciente</h3></a>
+    <a href="./pacientes/listaPacientes.php"><h3 style="text-align:center">Añadir Paciente</h3></a>
 </section>
 <hr>
 
 <?php
 
 function listPatients(){
-    $datosFichero = fopen("data.csv", "r");
+    $datosFichero = fopen("./visitas/data.csv", "r");
     echo "<table>";
     echo "<thead>";
     echo "<tr>";
-    echo "<th>Paciente</th>" . "<th>Importe</th>" . "<th>Fecha</th>" . "<th>Pagado</th>";
+    echo "<th>Paciente</th>" . "<th>Importe</th>" . "<th>Fecha</th>" . "<th>Pagado</th>" . "<th>Eliminar</th>" . "<th>Editar</th>";
     echo "</th>";
     echo "</thead>";
     while($linea = fgetcsv($datosFichero)){
@@ -51,6 +51,8 @@ function listPatients(){
         } else {
             echo "<td><img width='30' height='30' src='https://img.icons8.com/emoji/48/cross-mark-emoji.png' alt='cross-mark-emoji'/></td>";
         }
+        echo "<td><a href='./visitas/eliminarVisita.php?paciente=$linea[0]&importe=$linea[1]'><img width='30' height'30' src='https://img.icons8.com/material/24/filled-trash.png' alt='filled-trash'/></a></td>";
+        echo "<td><a href='./visitas/editarVisita.php?paciente=$linea[0]&importe=$linea[1]&fecha=$linea[2]&pagado=$linea[3]'><img width='30' height='30' src='https://img.icons8.com/material-outlined/24/edit--v1.png' alt='edit--v1'/></td>";
         echo "<tr>";
     }
     echo "</table>";

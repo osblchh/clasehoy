@@ -9,7 +9,7 @@
 <body><hr>
     <h1>CREADOR VISITAS</h1>
     <hr>
-    <form>
+    <form action="procesarCrearVisita.php" method="post">
         <label>Paciente:</label>
         <input type="text" name="Paciente" required>
         <label>Importe:</label>
@@ -19,6 +19,7 @@
         <label>Pagado</label>
         <input type="checkbox" name="Pagado">
         <input type="submit">
+
     </form>
     <hr>
     <div>

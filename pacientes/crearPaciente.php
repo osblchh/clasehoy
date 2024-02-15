@@ -7,11 +7,11 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body><hr>
-    <h1>CREADOR VISITAS</h1>
+    <h1>CREADOR DE PACIENTE</h1>
     <hr>
-    <form>
+    <form action="procesarCrearPaciente.php" method="post">
         <label>Identificador de Paciente:</label>
-        <input type="text" name="Identificador de Paciente" required>
+        <input type="text" name="paciente" required>
         <label>Nombre:</label>
         <input type="text" name="Nombre" required>
         <label>Dirección:</label>
